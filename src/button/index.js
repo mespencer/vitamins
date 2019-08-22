@@ -9,6 +9,7 @@ const Button = ({
   <button
     type="button"
     onClick={onClick}
+    disabled={disabled}
     {...css(styles[type], disabled && styles[`disabled-${type}`])}
   >
     {children}
