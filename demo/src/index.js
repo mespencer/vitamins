@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import ButtonDemo from './button';
+import ButtonDemo from './button-demo';
 
 const Demo = () => (
   <div>
