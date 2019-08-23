@@ -29,4 +29,4 @@ export const linkStyles = (theme) => {
   };
 };
 
-export default withStyles(linkStyles);
+export default withStyles(linkStyles, { pureComponent: true });

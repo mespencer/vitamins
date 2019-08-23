@@ -80,4 +80,4 @@ export const buttonStyles = ({
   };
 };
 
-export default withStyles(buttonStyles);
+export default withStyles(buttonStyles, { pureComponent: true });

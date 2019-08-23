@@ -6,4 +6,4 @@ export const boxStyles = () => ({
   },
 });
 
-export default withStyles(boxStyles);
+export default withStyles(boxStyles, { pureComponent: true });
