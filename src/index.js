@@ -5,4 +5,6 @@ import theme from './theme';
 ThemedStyleSheet.registerInterface(aphroditeInterface);
 ThemedStyleSheet.registerTheme(theme);
 
+export Box from './box';
 export Button from './button';
+export Link from './link';

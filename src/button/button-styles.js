@@ -1,6 +1,8 @@
 import { withStyles } from 'react-with-styles';
 
-export const buttonStyles = ({ colors, borderRadius, transitionTime }) => {
+export const buttonStyles = ({
+  colors, borderRadius, transitionTime, fonts,
+}) => {
   const horizontalPadding = 14;
   const verticalPadding = 10;
   const common = {
@@ -15,6 +17,10 @@ export const buttonStyles = ({ colors, borderRadius, transitionTime }) => {
     outline: 'none',
     transition: transitionTime,
     'font-weight': 'bold',
+    display: 'inline-block',
+    borderStyle: 'outset',
+    fontFamily: fonts.rubik,
+    fontSize: 16,
   };
   const disabledCommon = {
     color: colors.disabled.text,
