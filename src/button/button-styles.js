@@ -26,10 +26,16 @@ export const buttonStyles = ({
     color: colors.disabled.text,
     cursor: 'not-allowed',
   };
-  const outlineActive = { boxShadow: `0 0 0 1px ${colors.border}` };
+  const outlineActive = {
+    // boxShadow: `inset 0 0 0 1px ${colors.primary.background}`,
+    borderColor: colors.primary.background,
+  };
   const disabledOutlineActive = { boxShadow: 'none' };
-  const filledActive = {};
-  const textActive = { borderColor: colors.border };
+  const filledActive = {
+    background: colors.transparent,
+    color: colors.primary.text,
+  };
+  const textActive = { borderColor: colors.primary.background };
   const disabledTextActive = { borderColor: 'none' };
 
   return {
