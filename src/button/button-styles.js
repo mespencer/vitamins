@@ -27,61 +27,68 @@ export const buttonStyles = ({
     color: colors.disabled.text,
     cursor: 'not-allowed',
   };
-  const outlineActive = {
+  const outlineFocusHover = {
     borderColor: colors.primary.background,
   };
-  const disabledOutlineActive = { borderColor: border.color };
-  const filledActive = {
+  const disabledOutlineFocusHover = { borderColor: border.color };
+  const filledFocusHover = {
     background: colors.transparent,
     color: colors.primary.text,
   };
-  const disabledFilledActive = {
+  const disabledFilledFocusHover = {
     background: colors.disabled.background,
     color: colors.disabled.text,
   };
-  const textActive = { borderColor: colors.primary.background };
-  const disabledTextActive = { borderColor: 'none' };
+  const textFocusHover = { borderColor: colors.primary.background };
+  const disabledTextFocusHover = { borderColor: 'none' };
+  const active = {
+    boxShadow: `inset 0 0 0 1px ${colors.primary.background}`,
+    transition: '.1s',
+  };
 
   return {
     outline: {
       ...common,
       color: colors.primary.text,
       borderColor: border.color,
-      ':hover': outlineActive,
-      ':focus': outlineActive,
+      ':hover': outlineFocusHover,
+      ':focus': outlineFocusHover,
+      ':active': active,
     },
     'disabled-outline': {
       ...disabledCommon,
-      ':hover': disabledOutlineActive,
-      ':focus': disabledOutlineActive,
+      ':hover': disabledOutlineFocusHover,
+      ':focus': disabledOutlineFocusHover,
     },
     filled: {
       ...common,
       background: colors.primary.background,
       color: colors.primary.textInverted,
       borderColor: colors.primary.background,
-      ':hover': filledActive,
-      ':focus': filledActive,
+      ':hover': filledFocusHover,
+      ':focus': filledFocusHover,
+      ':active': active,
     },
     'disabled-filled': {
       ...disabledCommon,
       background: colors.disabled.background,
       borderColor: colors.disabled.background,
-      ':hover': disabledFilledActive,
-      ':focus': disabledFilledActive,
+      ':hover': disabledFilledFocusHover,
+      ':focus': disabledFilledFocusHover,
     },
     text: {
       ...common,
       color: colors.primary.text,
       background: colors.transparent,
       borderColor: colors.transparent,
-      ':hover': textActive,
-      ':focus': textActive,
+      ':hover': textFocusHover,
+      ':focus': textFocusHover,
+      ':active': active,
     },
     'disabled-text': {
       ...disabledCommon,
-      ':hover': disabledTextActive,
-      ':focus': disabledTextActive,
+      ':hover': disabledTextFocusHover,
+      ':focus': disabledTextFocusHover,
     },
   };
 };
