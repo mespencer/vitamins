@@ -19,7 +19,7 @@ export const buttonStyles = ({
     'font-weight': 'bold',
     display: 'inline-block',
     borderStyle: 'outset',
-    fontFamily: fonts.rubik,
+    fontFamily: fonts.accent,
     fontSize: 16,
     boxSizing: 'border-box',
   };
