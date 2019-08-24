@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { css } from 'react-with-styles';
 import style from './text-input-styles';
 import { generateId } from '../helpers';
 
-const id = generateId('text-input');
-
 const TextInput = ({
   text, onChange, labelText, hideLabel, styles,
 }) => {
+  // TODO: Decide a better way to generate ids. Maybe in componentWiliMount
+  const id = generateId('text-input');
+
   const [focused, updateFocus] = useState(false);
   const filled = text !== '' || focused;
+
   return (
     <label htmlFor={id} {...css(styles.label)}>
       <span
