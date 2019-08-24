@@ -2,7 +2,7 @@ import { withStyles } from 'react-with-styles';
 import { buttonStyles } from '../button/button-styles';
 
 export const linkStyles = (theme) => {
-  const { colors } = theme;
+  const { colors, fonts } = theme;
   const common = {
     textDecoration: 'none',
   };
@@ -11,6 +11,7 @@ export const linkStyles = (theme) => {
     link: {
       ...common,
       color: colors.primary.text,
+      fontFamily: fonts.main,
       ':hover': linkActive,
       ':focus': linkActive,
     },
