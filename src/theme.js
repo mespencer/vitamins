@@ -7,20 +7,22 @@ const rubikFont = {
 
 };
 
-export default {
-  colors: {
-    primary: {
-      background: 'blue',
-      text: 'blue',
-      textInverted: 'white',
-    },
-    disabled: {
-      text: 'rgba(0, 0, 0, .3)',
-      background: 'rgba(0, 0, 0, .1)',
-    },
-    transparent: 'transparent',
-    border: 'rgba(0, 0, 0, .2)',
+const colors = {
+  primary: {
+    background: 'blue',
+    text: 'blue',
+    textInverted: 'white',
   },
+  disabled: {
+    text: 'rgba(0, 0, 0, .3)',
+    background: 'rgba(0, 0, 0, .1)',
+  },
+  transparent: 'transparent',
+  border: 'rgba(0, 0, 0, .2)',
+};
+
+export default {
+  colors,
   fonts: {
     nunito: {
       fontFamily: ['Nunito', 'san-serif'],
@@ -29,6 +31,10 @@ export default {
     rubik: [rubikFont, 'sans-serif'],
   },
   screens: {},
-  borderRadius: 3,
+  border: {
+    radius: 3,
+    width: 1,
+    color: colors.border,
+  },
   transitionTime: '.3s',
 };

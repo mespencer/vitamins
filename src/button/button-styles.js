@@ -1,14 +1,14 @@
 import { withStyles } from 'react-with-styles';
 
 export const buttonStyles = ({
-  colors, borderRadius, transitionTime, fonts,
+  colors, border, transitionTime, fonts,
 }) => {
   const horizontalPadding = 14;
   const verticalPadding = 10;
   const common = {
     background: colors.transparent,
-    borderRadius,
-    borderWidth: 1,
+    borderRadius: border.radius,
+    borderWidth: border.width,
     paddingTop: verticalPadding,
     paddingBottom: verticalPadding,
     paddingLeft: horizontalPadding,
@@ -21,19 +21,23 @@ export const buttonStyles = ({
     borderStyle: 'outset',
     fontFamily: fonts.rubik,
     fontSize: 16,
+    boxSizing: 'border-box',
   };
   const disabledCommon = {
     color: colors.disabled.text,
     cursor: 'not-allowed',
   };
   const outlineActive = {
-    // boxShadow: `inset 0 0 0 1px ${colors.primary.background}`,
     borderColor: colors.primary.background,
   };
-  const disabledOutlineActive = { boxShadow: 'none' };
+  const disabledOutlineActive = { borderColor: border.color };
   const filledActive = {
     background: colors.transparent,
     color: colors.primary.text,
+  };
+  const disabledFilledActive = {
+    background: colors.disabled.background,
+    color: colors.disabled.text,
   };
   const textActive = { borderColor: colors.primary.background };
   const disabledTextActive = { borderColor: 'none' };
@@ -42,7 +46,7 @@ export const buttonStyles = ({
     outline: {
       ...common,
       color: colors.primary.text,
-      borderColor: colors.border,
+      borderColor: border.color,
       ':hover': outlineActive,
       ':focus': outlineActive,
     },
@@ -63,6 +67,8 @@ export const buttonStyles = ({
       ...disabledCommon,
       background: colors.disabled.background,
       borderColor: colors.disabled.background,
+      ':hover': disabledFilledActive,
+      ':focus': disabledFilledActive,
     },
     text: {
       ...common,
