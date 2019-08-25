@@ -27,6 +27,7 @@ const TextInputStyles = ({
       transition: transitionTime,
       fontSize,
       fontFamily: fonts.main,
+      lineHeight: 1,
     },
     label: {
       position: 'relative',

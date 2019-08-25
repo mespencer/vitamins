@@ -22,6 +22,7 @@ export const buttonStyles = ({
     fontFamily: fonts.accent,
     fontSize: 16,
     boxSizing: 'border-box',
+    lineHeight: 1.36,
   };
   const disabledCommon = {
     color: colors.disabled.text,
