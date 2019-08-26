@@ -5,7 +5,7 @@ import style from './text-input-styles';
 import { generateId } from '../helpers';
 
 const TextInput = ({
-  text, onChange, labelText, hideLabel, styles,
+  text, onChange, labelText, hideLabel, display, styles,
 }) => {
   // TODO: Decide a better way to generate ids. Maybe in componentWiliMount
   const id = generateId('text-input');
@@ -42,10 +42,12 @@ TextInput.propTypes = {
   onChange: PropTypes.func.isRequired,
   labelText: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
+  display: PropTypes.string,
 };
 
 TextInput.defaultProps = {
   hideLabel: false,
+  display: 'block',
 };
 
 export default style(TextInput);

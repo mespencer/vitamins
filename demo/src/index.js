@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import ButtonDemo from './button-demo';
 import LinkDemo from './link-demo';
 import TextInputDemo from './text-input-demo';
+import DateInputDemo from './date-input-demo';
 
 const Demo = () => (
   <div>
@@ -10,6 +11,7 @@ const Demo = () => (
     <ButtonDemo />
     <LinkDemo />
     <TextInputDemo />
+    <DateInputDemo />
   </div>
 );
 
