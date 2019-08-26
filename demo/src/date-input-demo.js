@@ -9,7 +9,12 @@ const DateInputDemo = () => {
     <CompoentContainer title="Date Input">
       <DateInput text={text} onChange={updateText} labelText="A date input" />
       <CompoentContainer title="Date and Time Input" isVariation>
-        <DateInput text={textWithTime} onChange={updateTextWithTime} labelText="A date time input" time />
+        <DateInput
+          text={textWithTime}
+          onChange={updateTextWithTime}
+          labelText="A date time input"
+          time
+        />
       </CompoentContainer>
     </CompoentContainer>
   );
