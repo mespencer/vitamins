@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextInput, Box, Button } from 'components';
+import { TextInput, Button } from 'components';
 import CompoentContainer from './component-container';
 
 const TextInputDemo = () => {
@@ -7,9 +7,7 @@ const TextInputDemo = () => {
   const [textWithLabel, updateTextWithoutLable] = useState('');
   return (
     <CompoentContainer title="Text Input">
-      <Box>
-        <TextInput text={text} onChange={updateText} labelText="A text input" />
-      </Box>
+      <TextInput text={text} onChange={updateText} labelText="A text input" />
       <CompoentContainer title="Text Input With Hidden Label" isVariation>
         <TextInput
           text={textWithLabel}
