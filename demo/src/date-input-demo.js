@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DateInput, Box } from 'components';
+import { DateInput } from 'components';
 import CompoentContainer from './component-container';
 
 const DateInputDemo = () => {
