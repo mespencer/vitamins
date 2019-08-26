@@ -14,7 +14,7 @@ const TextInput = ({
   const filled = text !== '' || focused;
 
   return (
-    <label htmlFor={id} {...css(styles.label)}>
+    <label htmlFor={id} {...css(styles.label, styles[display])}>
       <span
         {...css(styles.labelText,
           hideLabel ? styles.hide : false,
@@ -31,7 +31,7 @@ const TextInput = ({
         onChange={(e) => onChange(e.target.value)}
         onFocus={() => updateFocus(true)}
         onBlur={() => updateFocus(false)}
-        {...css(styles.input, focused ? styles.focused : false)}
+        {...css(styles.input, styles[display], focused ? styles.focused : false)}
       />
     </label>
   );
@@ -47,7 +47,7 @@ TextInput.propTypes = {
 
 TextInput.defaultProps = {
   hideLabel: false,
-  display: 'block',
+  display: 'inline',
 };
 
 export default style(TextInput);

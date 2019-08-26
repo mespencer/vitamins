@@ -1,4 +1,5 @@
 import { withStyles } from 'react-with-styles';
+import display from '../display';
 
 export const buttonStyles = ({
   colors, border, transitionTime, fonts,
@@ -91,6 +92,7 @@ export const buttonStyles = ({
       ':hover': disabledTextFocusHover,
       ':focus': disabledTextFocusHover,
     },
+    ...display,
   };
 };
 

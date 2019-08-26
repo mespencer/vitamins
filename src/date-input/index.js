@@ -45,7 +45,7 @@ DateInput.propTypes = {
 
 DateInput.defaultProps = {
   hideLabel: false,
-  display: 'block',
+  display: 'inline',
   time: false,
 };
 

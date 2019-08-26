@@ -4,13 +4,13 @@ import { css } from 'react-with-styles';
 import style from './button-styles';
 
 const Button = ({
-  children, onClick, type, disabled, styles,
+  children, onClick, type, disabled, display, styles,
 }) => (
   <button
     type="button"
     onClick={onClick}
     disabled={disabled}
-    {...css(styles[type], disabled && styles[`disabled-${type}`])}
+    {...css(styles[type], styles[display], disabled && styles[`disabled-${type}`])}
   >
     {children}
   </button>
@@ -21,11 +21,13 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   type: PropTypes.string,
   disabled: PropTypes.bool,
+  display: PropTypes.string,
 };
 
 Button.defaultProps = {
   type: 'outline',
   disabled: false,
+  display: 'inline',
 };
 
 export default style(Button);

@@ -1,4 +1,5 @@
 import { withStyles } from 'react-with-styles';
+import display from '../display';
 
 const TextInputStyles = ({
   colors, border, transitionTime, fonts,
@@ -28,6 +29,7 @@ const TextInputStyles = ({
       fontSize,
       fontFamily: fonts.main,
       lineHeight: 1,
+      boxSizing: 'border-box',
     },
     label: {
       position: 'relative',
@@ -44,7 +46,7 @@ const TextInputStyles = ({
       borderRadius: 3,
     },
     labelTextFilled: {
-      top: '-100%',
+      top: '-25%',
       transform: 'scale(.8)',
       background: colors.white,
       paddingLeft: 2,
@@ -57,6 +59,7 @@ const TextInputStyles = ({
     hide: {
       display: 'none', // TODO: Change this to something more a11y friendly
     },
+    ...display,
   };
 };
 
