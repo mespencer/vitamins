@@ -11,7 +11,7 @@ const Box = ({ children, display, styles }) => (
 
 Box.propTypes = {
   children: PropTypes.node.isRequired,
-  display: PropTypes.string,
+  display: PropTypes.oneOf(['block', 'inline']),
 };
 
 Box.defaultProps = {
