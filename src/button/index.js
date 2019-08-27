@@ -19,9 +19,9 @@ const Button = ({
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(['outline', 'filled', 'text']),
   disabled: PropTypes.bool,
-  display: PropTypes.string,
+  display: PropTypes.oneOf(['block', 'inline']),
 };
 
 Button.defaultProps = {
