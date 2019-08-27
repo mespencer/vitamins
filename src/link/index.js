@@ -21,7 +21,7 @@ Link.propTypes = {
   href: PropTypes.string.isRequired,
   openInNewTab: PropTypes.bool,
   button: PropTypes.bool,
-  buttonType: PropTypes.string,
+  buttonType: PropTypes.oneOf(['outline', 'filled', 'text']),
 };
 
 Link.defaultProps = {
