@@ -5,7 +5,8 @@
     "react/prop-types": [1, { "ignore": ["styles", "theme"] }],
     "react/jsx-props-no-spreading": [
       1,
-      { "html": "enforce", "custom": "enforce", "exceptions": ["styles"] }
-    ]
+      { "html": "enforce", "custom": "enforce", "exceptions": ["css"] }
+    ],
+    "react/jsx-fragments": [1, "element"] // nwb doesn't seem to support the short syntax
   }
 }
