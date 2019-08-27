@@ -16,6 +16,14 @@ const DateInputDemo = () => {
           time
         />
       </CompoentContainer>
+      <CompoentContainer title="Date Input With Error Message" isVariation>
+        <DateInput
+          text={textWithTime}
+          onChange={updateTextWithTime}
+          labelText="A date time input"
+          error="An error message"
+        />
+      </CompoentContainer>
     </CompoentContainer>
   );
 };
