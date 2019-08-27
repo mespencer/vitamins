@@ -19,7 +19,7 @@ export const buttonStyles = ({
     transition: transitionTime,
     'font-weight': 'bold',
     display: 'inline-block',
-    borderStyle: 'outset',
+    borderStyle: 'solid',
     fontFamily: fonts.accent,
     fontSize: 16,
     boxSizing: 'border-box',
