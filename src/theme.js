@@ -14,20 +14,36 @@ const nunitoFont = {
   src: "local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v11/XRXV3I6Li01BKofINeaB.woff2) format('woff2')",
 };
 
+const black = 'rgba(0, 0, 0, .9)';
+const white = 'rgba(255, 255, 255, 1)';
+const blue = 'blue';
+const darkGrey = 'rgba(0, 0, 0, .6)';
+const red = 'red';
+
 const colors = {
   primary: {
-    background: 'blue',
-    text: 'blue',
-    textInverted: 'white',
+    background: blue,
+    text: blue,
+    textInverted: white,
   },
   disabled: {
-    text: 'rgba(0, 0, 0, .3)',
+    text: darkGrey,
     background: 'rgba(0, 0, 0, .1)',
+  },
+  text: {
+    main: black,
+    inverted: white,
+    grey: darkGrey,
+  },
+  error: {
+    text: red,
+    border: red,
   },
   transparent: 'transparent',
   border: 'rgba(0, 0, 0, .2)',
-  black: 'rgba(0, 0, 0, .9)',
-  white: 'rgba(255, 255, 255, 1)',
+  black,
+  white,
+  darkGrey,
 };
 
 export default {

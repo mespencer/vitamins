@@ -12,6 +12,10 @@ const TextInputStyles = ({
   };
   const fontSize = 16;
   return {
+    container: {
+      paddingBottom: 14,
+      position: 'relative',
+    },
     input: {
       paddingTop: verticalPadding,
       paddingBottom: verticalPadding,
@@ -30,6 +34,8 @@ const TextInputStyles = ({
       fontFamily: fonts.main,
       lineHeight: 1,
       boxSizing: 'border-box',
+      borderStyle: 'solid',
+      color: colors.text.main,
     },
     label: {
       position: 'relative',
@@ -44,6 +50,7 @@ const TextInputStyles = ({
       transition: transitionTime,
       transformOrigin: 'center left',
       borderRadius: 3,
+      color: colors.text.grey,
     },
     labelTextFilled: {
       top: '-25%',
@@ -54,6 +61,27 @@ const TextInputStyles = ({
     },
     labelTextFocused: {
       color: colors.primary.text,
+    },
+    status: {
+      position: 'absolute',
+      margin: 0,
+      left: horizontalPadding,
+      fontFamily: fonts.main,
+      fontSize: 12,
+      color: colors.text.grey,
+    },
+    error: {
+      borderColor: colors.error.border,
+      ':hover': {
+        borderColor: colors.error.border,
+      },
+      ':focus': {
+        borderColor: colors.error.border,
+        boxShadow: `inset 0 0 0 1px ${colors.error.border}`,
+      },
+    },
+    errorText: {
+      color: colors.error.text,
     },
     focused,
     hide: {
