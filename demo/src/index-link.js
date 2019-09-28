@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, Box } from 'components';
+import { Link } from 'components';
 
 const IndexLink = ({ title }) => (
-  <Box>
-    <Link href={`#${title.replace(/ /g, '-')}`} button buttonType="text">{title}</Link>
-  </Box>
+  <Link href={`#${title.replace(/ /g, '-')}`} button buttonType="text" display="block">{title}</Link>
 );
 
 IndexLink.propTypes = {
