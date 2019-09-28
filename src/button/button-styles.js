@@ -24,6 +24,7 @@ export const buttonStyles = ({
     fontSize: 16,
     boxSizing: 'border-box',
     lineHeight: 1.36,
+    textAlign: 'center',
   };
   const disabledCommon = {
     color: colors.disabled.text,
