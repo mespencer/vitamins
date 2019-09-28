@@ -41,6 +41,7 @@ const TextInputStyles = ({
       position: 'relative',
       fontSize,
       fontFamily: fonts.main,
+      cursor: 'text',
     },
     labelText: {
       position: 'absolute',
