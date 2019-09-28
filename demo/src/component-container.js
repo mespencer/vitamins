@@ -5,7 +5,7 @@ const ComponentContainer = ({ title, children, isVariation }) => {
   const Element = isVariation ? 'h3' : 'h2';
   return (
     <div>
-      <Element>{title}</Element>
+      <Element id={title.replace(/ /g, '-')}>{title}</Element>
       {children}
     </div>
   );
