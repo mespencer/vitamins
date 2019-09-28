@@ -1,5 +1,6 @@
 import { withStyles } from 'react-with-styles';
 import { buttonStyles } from '../button/button-styles';
+import display from '../display';
 
 export const linkStyles = (theme) => {
   const { colors, fonts } = theme;
@@ -27,6 +28,7 @@ export const linkStyles = (theme) => {
       ...common,
       ...buttonStyles(theme).text,
     },
+    ...display,
   };
 };
 
