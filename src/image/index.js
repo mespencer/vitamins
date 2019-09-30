@@ -4,19 +4,19 @@ import { css } from 'react-with-styles';
 import style from './image-styles';
 
 const Image = ({
-  src, alt, circle, styles,
+  src, alt, shape, styles,
 }) => (
-  <img src={src} alt={alt} {...css(styles.image, circle ? styles.circle : false)} />
+  <img src={src} alt={alt} {...css(styles.image, styles[shape])} />
 );
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  circle: PropTypes.bool,
+  shape: PropTypes.string,
 };
 
 Image.defaultProps = {
-  circle: false,
+  shape: 'rounded',
 };
 
 export default style(Image);
