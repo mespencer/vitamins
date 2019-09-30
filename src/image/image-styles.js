@@ -1,4 +1,5 @@
 import { withStyles } from 'react-with-styles';
+import display from '../display';
 
 export const imageStyles = ({ border }) => ({
   image: {
@@ -13,6 +14,7 @@ export const imageStyles = ({ border }) => ({
   square: {
     borderRadius: 0,
   },
+  ...display,
 });
 
 export default withStyles(imageStyles, { pureComponent: true });
