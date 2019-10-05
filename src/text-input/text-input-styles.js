@@ -1,7 +1,7 @@
 import { withStyles } from 'react-with-styles';
 import display from '../display';
 
-const TextInputStyles = ({
+export const baseStyles = ({
   colors, border, transitionTime, fonts,
 }) => {
   const horizontalPadding = 14;
@@ -11,6 +11,7 @@ const TextInputStyles = ({
     boxShadow: `inset 0 0 0 1px ${colors.primary.background}`,
   };
   const fontSize = 16;
+
   return {
     container: {
       paddingBottom: 14,
@@ -29,13 +30,13 @@ const TextInputStyles = ({
         borderColor: colors.primary.background,
       },
       ':focus': focused,
-      transition: transitionTime,
       fontSize,
       fontFamily: fonts.main,
       lineHeight: 1,
       boxSizing: 'border-box',
       borderStyle: 'solid',
       color: colors.text.main,
+      transition: transitionTime,
     },
     label: {
       position: 'relative',
@@ -45,8 +46,6 @@ const TextInputStyles = ({
     },
     labelText: {
       position: 'absolute',
-      top: '50%',
-      transform: 'translateY(-50%)',
       left: horizontalPadding,
       transition: transitionTime,
       transformOrigin: 'center left',
@@ -54,7 +53,6 @@ const TextInputStyles = ({
       color: colors.text.grey,
     },
     labelTextFilled: {
-      top: '-25%',
       transform: 'scale(.8)',
       background: colors.white,
       paddingLeft: 2,
@@ -91,5 +89,32 @@ const TextInputStyles = ({
     ...display,
   };
 };
+
+const TextInputStyles = ({
+  colors, border, transitionTime, fonts,
+}) => ({
+  ...baseStyles({
+    colors, border, transitionTime, fonts,
+  }),
+  input: {
+    ...baseStyles({
+      colors, border, transitionTime, fonts,
+    }).input,
+    transition: transitionTime,
+  },
+  labelText: {
+    ...baseStyles({
+      colors, border, transitionTime, fonts,
+    }).labelText,
+    transform: 'translateY(-50%)',
+    top: '50%',
+  },
+  labelTextFilled: {
+    ...baseStyles({
+      colors, border, transitionTime, fonts,
+    }).labelTextFilled,
+    top: '-25%',
+  },
+});
 
 export default withStyles(TextInputStyles, { pureComponent: true });
