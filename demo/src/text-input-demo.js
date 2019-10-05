@@ -38,6 +38,7 @@ const TextInputDemo = () => {
           onChange={updateTextWithoutLabel}
           labelText="A text input"
           status="A status message"
+          display="inline"
           hideLabel
         />
         <Button type="filled" onClick={() => {}}>Do Something</Button>
