@@ -29,14 +29,14 @@ const TextBoxStyles = ({
         borderColor: colors.primary.background,
       },
       ':focus': focused,
-      transition: transitionTime,
-      transitionHeight: 0,
+      transition: `border ${transitionTime}, box-shadow ${transitionTime}`,
       fontSize,
       fontFamily: fonts.main,
       lineHeight: 1,
       boxSizing: 'border-box',
       borderStyle: 'solid',
       color: colors.text.main,
+      minHeight: 40,
     },
     label: {
       position: 'relative',
@@ -46,7 +46,7 @@ const TextBoxStyles = ({
     },
     labelText: {
       position: 'absolute',
-      top: 11,
+      top: 9,
       left: horizontalPadding,
       transition: transitionTime,
       transformOrigin: 'center left',
@@ -86,7 +86,7 @@ const TextBoxStyles = ({
     },
     focused,
     hide: {
-      display: 'none', // TODO: Change this to something more a11y friendly
+      ...display.hidden,
     },
     ...display,
   };
