@@ -60,7 +60,7 @@ TextBox.propTypes = {
 
 TextBox.defaultProps = {
   hideLabel: false,
-  display: 'inline',
+  display: 'block',
   status: '',
   error: false,
 };

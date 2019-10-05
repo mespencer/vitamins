@@ -61,7 +61,7 @@ TextInput.propTypes = {
 
 TextInput.defaultProps = {
   hideLabel: false,
-  display: 'inline',
+  display: 'block',
   status: '',
   error: false,
 };
