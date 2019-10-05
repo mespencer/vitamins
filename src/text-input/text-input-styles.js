@@ -86,7 +86,7 @@ const TextInputStyles = ({
     },
     focused,
     hide: {
-      display: 'none', // TODO: Change this to something more a11y friendly
+      ...display.hidden,
     },
     ...display,
   };
