@@ -6,6 +6,7 @@ import ButtonDemo from './button-demo';
 import LinkDemo from './link-demo';
 import TextInputDemo from './text-input-demo';
 import DateInputDemo from './date-input-demo';
+import TextBoxDemo from './text-box-demo';
 import ImageDemo from './image-demo';
 
 const Demo = () => (
@@ -20,6 +21,7 @@ const Demo = () => (
         <IndexLink title="Link" />
         <IndexLink title="Text Input" />
         <IndexLink title="Date Input" />
+        <IndexLink title="Text Box" />
         <IndexLink title="Image" />
       </Col>
       <Col>
@@ -27,6 +29,7 @@ const Demo = () => (
         <LinkDemo />
         <TextInputDemo />
         <DateInputDemo />
+        <TextBoxDemo />
         <ImageDemo />
       </Col>
     </Row>
