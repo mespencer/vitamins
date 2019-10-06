@@ -1,7 +1,6 @@
-import { withStyles } from 'react-with-styles';
 import { baseStyles } from '../text-input/text-input-styles';
 
-const TextBoxStyles = ({
+const TextBoxStyles = ({ height }) => ({
   colors, border, transitionTime, fonts,
 }) => ({
   ...baseStyles({
@@ -13,6 +12,7 @@ const TextBoxStyles = ({
     }).input,
     transition: `border ${transitionTime}, box-shadow ${transitionTime}`,
     minHeight: 40,
+    height,
   },
   labelText: {
     ...baseStyles({
@@ -28,4 +28,4 @@ const TextBoxStyles = ({
   },
 });
 
-export default withStyles(TextBoxStyles, { pureComponent: true });
+export default TextBoxStyles;

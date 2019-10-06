@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-with-styles';
+import useStyles from 'react-with-styles/lib/hooks/useStyles';
 import style from './text-box-styles';
 import { generateId } from '../helpers';
 
 const TextBox = ({
-  text, onChange, labelText, hideLabel, display, status, error, styles,
+  text, onChange, labelText, hideLabel, display, status, error, height,
 }) => {
   // TODO: Decide a better way to generate ids. Maybe in componentWiliMount
   const id = generateId('text-input');
 
+  const { css, styles } = useStyles({ stylesFn: style({ height }) });
   const [focused, updateFocus] = useState(false);
   const filled = text !== '' || focused;
   const statusText = typeof error === 'string' && error !== '' ? error : status;
@@ -56,6 +57,7 @@ TextBox.propTypes = {
     PropTypes.string,
     PropTypes.bool,
   ]),
+  height: PropTypes.number,
 };
 
 TextBox.defaultProps = {
@@ -63,6 +65,7 @@ TextBox.defaultProps = {
   display: 'block',
   status: '',
   error: false,
+  height: 150,
 };
 
-export default style(TextBox);
+export default TextBox;
