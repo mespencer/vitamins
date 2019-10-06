@@ -1,8 +1,7 @@
-import { withStyles } from 'react-with-styles';
 import { buttonStyles } from '../button/button-styles';
 import display from '../display';
 
-export const linkStyles = (theme) => {
+export const linkStyles = () => (theme) => {
   const { colors, fonts } = theme;
   const common = {
     textDecoration: 'none',
@@ -32,4 +31,4 @@ export const linkStyles = (theme) => {
   };
 };
 
-export default withStyles(linkStyles, { pureComponent: true });
+export default linkStyles;
