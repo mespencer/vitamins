@@ -1,7 +1,6 @@
-import { withStyles } from 'react-with-styles';
 import display from '../display';
 
-export const buttonStyles = ({
+const buttonStyles = ({
   colors, border, transitionTime, fonts,
 }) => {
   const horizontalPadding = 14;
@@ -97,4 +96,4 @@ export const buttonStyles = ({
   };
 };
 
-export default withStyles(buttonStyles, { pureComponent: true });
+export default buttonStyles;

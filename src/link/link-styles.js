@@ -1,4 +1,4 @@
-import { buttonStyles } from '../button/button-styles';
+import buttonStyles from '../button/button-styles';
 import display from '../display';
 
 export const linkStyles = () => (theme) => {
