@@ -1,7 +1,6 @@
-import { withStyles } from 'react-with-styles';
 import display from '../display';
 
-export const imageStyles = ({ border }) => ({
+export const imageStyles = () => ({ border }) => ({
   image: {
     maxWidth: '100%',
   },
@@ -17,4 +16,4 @@ export const imageStyles = ({ border }) => ({
   ...display,
 });
 
-export default withStyles(imageStyles, { pureComponent: true });
+export default imageStyles;

@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-with-styles';
+import useStyles from 'react-with-styles/lib/hooks/useStyles';
 import style from './image-styles';
 
 const Image = ({
-  src, alt, shape, display, styles,
-}) => (
-  <img src={src} alt={alt} {...css(styles.image, styles[display], styles[shape])} />
-);
+  src, alt, shape, display,
+}) => {
+  const { css, styles } = useStyles({ stylesFn: style() });
+
+  return (
+    <img src={src} alt={alt} {...css(styles.image, styles[display], styles[shape])} />
+  );
+};
 
 Image.propTypes = {
   src: PropTypes.string.isRequired,
@@ -21,4 +25,4 @@ Image.defaultProps = {
   display: 'inline',
 };
 
-export default style(Image);
+export default Image;
