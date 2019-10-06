@@ -1,7 +1,7 @@
 import buttonStyles from '../button/button-styles';
 import display from '../display';
 
-export const linkStyles = () => (theme) => {
+export const linkStyles = (theme) => {
   const { colors, fonts } = theme;
   const common = {
     textDecoration: 'none',

@@ -6,7 +6,7 @@ import style from './link-styles';
 const Link = ({
   children, href, openInNewTab, button, buttonType, display,
 }) => {
-  const { css, styles } = useStyles({ stylesFn: style() });
+  const { css, styles } = useStyles({ stylesFn: style });
 
   return (
     <a

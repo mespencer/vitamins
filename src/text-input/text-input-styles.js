@@ -89,7 +89,7 @@ export const baseStyles = ({
   };
 };
 
-const TextInputStyles = () => ({
+const TextInputStyles = ({
   colors, border, transitionTime, fonts,
 }) => ({
   ...baseStyles({

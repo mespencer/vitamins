@@ -10,7 +10,7 @@ const TextInput = ({
   // TODO: Decide a better way to generate ids. Maybe in componentWiliMount
   const id = generateId('text-input');
 
-  const { css, styles } = useStyles({ stylesFn: style() });
+  const { css, styles } = useStyles({ stylesFn: style });
   const [focused, updateFocus] = useState(false);
   const filled = text !== '' || focused;
   const statusText = typeof error === 'string' && error !== '' ? error : status;

@@ -6,7 +6,7 @@ import style from './image-styles';
 const Image = ({
   src, alt, shape, display,
 }) => {
-  const { css, styles } = useStyles({ stylesFn: style() });
+  const { css, styles } = useStyles({ stylesFn: style });
 
   return (
     <img src={src} alt={alt} {...css(styles.image, styles[display], styles[shape])} />
