@@ -1,6 +1,6 @@
 import { baseStyles } from '../text-input/text-input-styles';
 
-const TextBoxStyles = ({ height }) => ({
+const textBoxStyles = ({ height }) => ({
   colors, border, transitionTime, fonts,
 }) => ({
   ...baseStyles({
@@ -28,4 +28,4 @@ const TextBoxStyles = ({ height }) => ({
   },
 });
 
-export default TextBoxStyles;
+export default textBoxStyles;

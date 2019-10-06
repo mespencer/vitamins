@@ -1,6 +1,6 @@
 import display from '../display';
 
-export const imageStyles = ({ border }) => ({
+const imageStyles = ({ border }) => ({
   image: {
     maxWidth: '100%',
   },

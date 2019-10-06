@@ -89,7 +89,7 @@ export const baseStyles = ({
   };
 };
 
-const TextInputStyles = ({
+const textInputStyles = ({
   colors, border, transitionTime, fonts,
 }) => ({
   ...baseStyles({
@@ -116,4 +116,4 @@ const TextInputStyles = ({
   },
 });
 
-export default TextInputStyles;
+export default textInputStyles;
