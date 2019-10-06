@@ -1,4 +1,3 @@
-import { withStyles } from 'react-with-styles';
 import display from '../display';
 
 export const baseStyles = ({
@@ -90,7 +89,7 @@ export const baseStyles = ({
   };
 };
 
-const TextInputStyles = ({
+const TextInputStyles = () => ({
   colors, border, transitionTime, fonts,
 }) => ({
   ...baseStyles({
@@ -117,4 +116,4 @@ const TextInputStyles = ({
   },
 });
 
-export default withStyles(TextInputStyles, { pureComponent: true });
+export default TextInputStyles;
