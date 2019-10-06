@@ -1,13 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'react-with-styles';
+import useStyles from 'react-with-styles/lib/hooks/useStyles';
 import style from './box-styles';
 
-const Box = ({ children, display, styles }) => (
-  <div {...css(styles.box, styles[display])}>
-    {children}
-  </div>
-);
+const Box = ({ children, display }) => {
+  const { css, styles } = useStyles({ stylesFn: style });
+
+  return (
+    <div {...css(styles.box, styles[display])}>
+      {children}
+    </div>
+  );
+};
 
 Box.propTypes = {
   children: PropTypes.node.isRequired,
@@ -18,4 +22,4 @@ Box.defaultProps = {
   display: 'block',
 };
 
-export default style(Box);
+export default Box;
