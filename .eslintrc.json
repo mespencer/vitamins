@@ -2,7 +2,7 @@
   "extends": ["airbnb"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prop-types": [1, { "ignore": ["styles", "theme"] }],
+    "react/prop-types": [1, { "ignore": ["stylesOverride"] }],
     "react/jsx-props-no-spreading": [
       1,
       { "html": "enforce", "custom": "enforce", "exceptions": ["css"] }
