@@ -89,29 +89,19 @@ export const baseStyles = ({
   };
 };
 
-const textInputStyles = ({
-  colors, border, transitionTime, fonts,
-}) => ({
-  ...baseStyles({
-    colors, border, transitionTime, fonts,
-  }),
+const textInputStyles = (theme) => ({
+  ...baseStyles(theme),
   input: {
-    ...baseStyles({
-      colors, border, transitionTime, fonts,
-    }).input,
-    transition: transitionTime,
+    ...baseStyles(theme).input,
+    transition: theme.transitionTime,
   },
   labelText: {
-    ...baseStyles({
-      colors, border, transitionTime, fonts,
-    }).labelText,
+    ...baseStyles(theme).labelText,
     transform: 'translateY(-50%)',
     top: '50%',
   },
   labelTextFilled: {
-    ...baseStyles({
-      colors, border, transitionTime, fonts,
-    }).labelTextFilled,
+    ...baseStyles(theme).labelTextFilled,
     top: '-25%',
   },
 });
